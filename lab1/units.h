@@ -11,8 +11,6 @@ class UValue {
   UValue();
   UValue(double value, std::string units);
  
-  ~UValue(); 
- 
   double get_value();
   std::string get_units();
 };

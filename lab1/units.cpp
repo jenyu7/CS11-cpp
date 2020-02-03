@@ -29,13 +29,13 @@ string UValue::get_units() {
 // uses the compare() operation to compare strings (== 0 if strings are equal)
 UValue convert_to(UValue input, string to_units) {
   if (input.get_units().compare("lb") == 0 && to_units.compare("kg") == 0) {
-    return UValue u{input.get_value() * 0.45, to_units}; 
+    return UValue{input.get_value() * 0.45, to_units}; 
   } 
   if (input.get_units().compare("gal") == 0 && to_units.compare("L") == 0) { 
-    return UValue u{input.get_value() * 3.79, to_units}; 
+    return UValue{input.get_value() * 3.79, to_units}; 
   } 
   if (input.get_units().compare("mi") == 0 && to_units.compare("km") == 0) { 
-    return UValue u{input.get_value() * 1.6, to_units}; 
+    return UValue{input.get_value() * 1.6, to_units}; 
 
   }
   return input;
