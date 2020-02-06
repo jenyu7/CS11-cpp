@@ -28,6 +28,7 @@ UnitConverter init_converter(string filename) {
 }
 
 int main() {
+  cout << "Loading units from rules.txt\n";
   UnitConverter u = init_converter("rules.txt");
   cout << "Enter value with units: ";
   double value;
