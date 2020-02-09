@@ -4,6 +4,10 @@
 
 using namespace std;
 
+// The main program for the unit converter. Takes in user input and
+// tries to convert the specified units
+
+// initializes the converter with some unit conversions
 UnitConverter init_converter() {
   UnitConverter uconvert = UnitConverter();
   uconvert.add_conversion("mi", 5280, "ft");
@@ -20,13 +24,16 @@ UnitConverter init_converter() {
   uconvert.add_conversion("L", 1000, "ml");
   return uconvert;
 }
+
+// main function that takes in user input and tries to convert to
+// the units specified
 int main() {
   UnitConverter u = init_converter();
   cout << "Enter value with units: ";
   double value;
   string units;
   cin >> value >> units;
-  UValue old = UValue(value, units);
+  UValue old{value, units};
   cout << "Convert to units: ";
   string to_units;
   cin >> to_units;

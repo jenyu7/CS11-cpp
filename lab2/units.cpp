@@ -5,6 +5,7 @@
 #include <iostream>
 
 using namespace std;
+// this file contains the UValue class and the UnitConverter class
 
 // default constructor
 UValue::UValue() {
@@ -16,11 +17,6 @@ UValue::UValue() {
 UValue::UValue(double value, string units){
   this->value = value;
   this->units = units;
-}
-
-// destructor
-UValue::~UValue() {
-  //nothing to do
 }
 
 // returns value of UValue
@@ -35,12 +31,15 @@ string UValue::get_units() {
 
 // UnitConverter Class
 
+// default constructor
 UnitConverter::UnitConverter(){
 }
 
+// destructor
 UnitConverter::~UnitConverter() {
 }
 
+// checks if the UnitConverter already has a conversion 
 void UnitConverter::not_in_conversions(string from_units, string to_units) {
    // loop through all conversions and see if one already exists
   for (Conversion c : conversions) {
@@ -52,6 +51,9 @@ void UnitConverter::not_in_conversions(string from_units, string to_units) {
   }
 }
 
+// adds a conversion with from_units, multiplier and to_units if it is not
+// yet a conversion
+// Also adds in the opposite direction to_units -> from_units and 1/ multiplier
 void UnitConverter::add_conversion(string from_units, double multiplier, string to_units) {
   not_in_conversions(from_units, to_units);
   // add in the conversion if it doesn't yet exist
@@ -66,7 +68,7 @@ void UnitConverter::add_conversion(string from_units, double multiplier, string 
 UValue UnitConverter::convert_to(UValue input, string to_units) {
   for (Conversion c : conversions){
     if (c.from_units == input.get_units() && c.to_units == to_units) {
-      return UValue(input.get_value() * c.multiplier, to_units);
+      return UValue{input.get_value() * c.multiplier, to_units};
     }
   }
   string msg = "Couldn't convert to " + to_units + "!\n";

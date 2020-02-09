@@ -1,6 +1,8 @@
 #include <string>
 #include <vector>
 
+// Header file that holds definitions for UValue and UnitConverter classes
+
 /* Immutable class that holds a value and its units */
 class UValue {
   // value of the object
@@ -12,12 +14,11 @@ class UValue {
   UValue();
   UValue(double value, std::string units);
 
-  ~UValue();
-
   double get_value();
   std::string get_units();
 };
 
+// UnitConverter class responsible for converting UValues
 class UnitConverter {
   // Conversion struct stores the units from->to and the multiplier
   struct Conversion {
