@@ -1,0 +1,27 @@
+CS11 Intro C++ Lab 3
+====================
+
+This is an OPTIONAL feedback survey.  You will not gain or lose any points
+for answering these questions, or not answering these questions, or being
+candid in your responses.
+
+Q1:  Approximately how long did it take for you to implement the assignment?
+Around 4 hours.
+
+Q2:  Were there parts of the assignment that were difficult and/or frustrating
+     to figure out how to do correctly?
+
+
+Q3:  Did you find the assignment interesting to complete?
+Yes, provided an easy way to make documentation I didn't know about. 
+
+
+Q4:  Do you feel that the assignment helped you deepen your understanding
+     of the C++ topics covered in the corresponding lecture?
+
+
+
+Q5:  Are there related topics that were not covered, that you would like
+     to see covered in the future?
+
+
