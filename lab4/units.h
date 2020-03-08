@@ -36,8 +36,6 @@ class UnitConverter {
  public:
   /** default constructor */
   UnitConverter();
-  /** default destructor */
-  ~UnitConverter();
   
   // adds a conversion to the list
   void add_conversion(const std::string &from_units, double multiplier, const std::string &to_units);

@@ -1,5 +1,5 @@
 NAME = lab4
-CXXFLAGS = -Wall -std=c++14
+CXXFLAGS = -Wall -Wpedantic -Werror=sign-compare -std=c++14
 CONVERT_OBJS = units.o convert.o
 TEST_OBJS = units.cpp testbase.cpp hw3testunits.cpp 
 
@@ -14,8 +14,6 @@ hw3testunits: $(TEST_OBJS)
 doc : 
 	doxygen Doxyfile
 test : 
-	make clean
-	make
 	./hw3testunits
 
 clean :

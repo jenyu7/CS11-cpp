@@ -5,8 +5,14 @@
 
 using namespace std;
 
+// The main program for the unit covnerter. Takes in user input and
+// tries to convert the specified units
+
 /** Initializes the conversions in the UnitConverter based on
-    the conversions in a file. Throws an error if file cannot be accessed.*/
+ *  the conversions in a file. Throws an error if file cannot be accessed.
+ *  @param filename name of file to read in the conversions from
+ *  @return Returns a UnitConverter with initialized conversions
+   */
 UnitConverter init_converter(string filename) {
   ifstream ifs{filename};
   // check if filename is valid
