@@ -1,4 +1,4 @@
-CXXFLAGS = -Wall -std=c++14
+CXXFLAGS = -Wall -Werror -Wpedantic -Werror=sign-compare -std=c++14
 TEST_OBJS = test-rational.o testbase.o rational.o 
 
 all : test-rational
@@ -6,7 +6,7 @@ all : test-rational
 test-rational: $(TEST_OBJS)
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 
-test : test-rational
+test :
 	./test-rational 
 
 clean :
